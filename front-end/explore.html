@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>kizami — explore</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Libre+Bodoni:wght@700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="explore.css" />
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <header class="navbar">
+    <a href="index.html" class="logo">kizami</a>
+    <nav class="nav-links">
+      <a href="explore.html" class="nav-link active">explore</a>
+      <a href="manual.html" class="nav-link">manual</a>
+      <a href="history.html" class="nav-link">history</a>
+    </nav>
+  </header>
+
+  <!-- Main Card Grid -->
+  <main class="explore-container">
+    <div class="cards-grid">
+
+      <!-- Card 1: Pomodoro Timer -->
+      <section class="card">
+        <div class="card-header">
+          <h2 class="card-title">Pomodoro Timer</h2>
+          <ul class="timer-specs">
+            <li>focus time - 25 min</li>
+            <li>short break - 5 min</li>
+            <li>long break - 10 min</li>
+          </ul>
+        </div>
+
+        <!-- Animated SVG Pie Chart (3 Segments: 25m Focus, 10m Long Break, 5m Short Break) -->
+        <div class="chart-container" data-chart="pomodoro">
+          <svg viewBox="0 0 100 100" class="pie-chart">
+            <!-- Background slice / Focus (Purple) 62.5% -->
+            <circle class="pie-slice slice-purple" r="25" cx="50" cy="50"
+                    style="--target-dash: 98.17; --total: 157.08; --offset: 0;"></circle>
+            <!-- Long Break (Ochre / Gold) 25% -->
+            <circle class="pie-slice slice-gold" r="25" cx="50" cy="50"
+                    style="--target-dash: 39.27; --total: 157.08; --offset: -98.17;"></circle>
+            <!-- Short Break (Sage Green) 12.5% -->
+            <circle class="pie-slice slice-green" r="25" cx="50" cy="50"
+                    style="--target-dash: 19.63; --total: 157.08; --offset: -137.44;"></circle>
+          </svg>
+        </div>
+
+        <a href="pomodoro.html" class="btn-try">Try Now!</a>
+      </section>
+
+      <!-- Card 2: 52/17 Ultradian Rhythm -->
+      <section class="card">
+        <div class="card-header">
+          <h2 class="card-title">52/17 Ultradian<br>Rhythm</h2>
+          <ul class="timer-specs">
+            <li>focus time - 52min</li>
+            <li>break - 17 min</li>
+          </ul>
+        </div>
+
+        <!-- Animated SVG Pie Chart (2 Segments: 52m Focus 75.4%, 17m Break 24.6%) -->
+        <div class="chart-container" data-chart="ultradian">
+          <svg viewBox="0 0 100 100" class="pie-chart">
+            <!-- Focus (Purple) ~75.4% -->
+            <circle class="pie-slice slice-purple" r="25" cx="50" cy="50"
+                    style="--target-dash: 118.44; --total: 157.08; --offset: 0;"></circle>
+            <!-- Break (Ochre / Gold) ~24.6% -->
+            <circle class="pie-slice slice-gold" r="25" cx="50" cy="50"
+                    style="--target-dash: 38.64; --total: 157.08; --offset: -118.44;"></circle>
+          </svg>
+        </div>
+
+        <a href="ultradian.html" class="btn-try">Try Now!</a>
+      </section>
+
+      <!-- Card 3: Eisenhower Timer -->
+      <section class="card">
+        <div class="card-header">
+          <h2 class="card-title">Eisenhower Timer</h2>
+          <p class="card-description">
+            adapts your work interval based on task priority. Urgent and important tasks get short, intense 25-minute sprints. Important but not urgent work unlocks 50-minute deep-focus blocks. Busywork gets quick 15-minute bursts. One tap on a task, and the timer sets itself — no deciding, just doing.
+          </p>
+        </div>
+
+        <a href="eisenhower.html" class="btn-try">Try Now!</a>
+      </section>
+
+    </div>
+  </main>
+
+  <script src="explore.js"></script>
+</body>
+</html>

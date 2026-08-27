@@ -1,294 +1,187 @@
 /* =========================
    Global Reset
 ========================= */
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-
 /* =========================
    Body
 ========================= */
-
 body {
   min-height: 100vh;
-
   background-color: #452D45;
-
   color: #E9E8D9;
-
   font-family: 'Jost', sans-serif;
-
-  display: flex;
-  flex-direction: column;
 }
-
 
 /* =========================
    Main Page Wrapper
 ========================= */
-
 .page-wrapper {
   min-height: 100vh;
-
   display: flex;
   flex-direction: column;
-
-  padding: 2.5rem 4rem;
-
-  /* Fallback background color */
   background-color: #452D45;
-
-  /*
-    Wallpaper location:
-
-    index.html and style.css are inside:
-    front-end/
-
-    wallpaper.png is inside:
-    assets/
-
-    Therefore we go up one folder using ../
-  */
-  /*background-image: url('../assets/wallpaper.png');
-
-  /* Make wallpaper cover the entire screen */
+  background-image: url('assets/wallpaper.png'); /* adjust path if needed, e.g., ../assets/wallpaper.png */
   background-size: cover;
-
-  /* Keep wallpaper centered */
   background-position: center;
-
-  /* Prevent the wallpaper from repeating */
   background-repeat: no-repeat;
-
-  /* Keep wallpaper fixed while scrolling */
   background-attachment: fixed;
 }
 
-
-/* =========================
-   Navigation Bar
-========================= */
-
+/* ========================================================
+   Navigation Bar (Identical to Explore Page)
+   ======================================================== */
 .navbar {
   display: flex;
-
-  justify-content: flex-end;
-
+  justify-content: space-between;
   align-items: center;
-
+  padding: 1.25rem 4rem;
   width: 100%;
 }
 
+.logo {
+  font-family: 'Libre Bodoni', serif;
+  font-weight: 700;
+  font-size: 2.2rem;
+  line-height: 1.2;
+  color: #E9E8D9;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+}
 
-/* Navigation Links Container */
+.logo-placeholder {
+  visibility: hidden; /* Invisible on index, but keeps exact height & spacing */
+  user-select: none;
+  pointer-events: none;
+}
 
 .nav-links {
   display: flex;
-
-  gap: 3rem;
+  gap: 3.5rem;
+  align-items: center;
 }
-
-
-/* Individual Navigation Links */
 
 .nav-link {
   color: #E9E8D9;
-
   text-decoration: none;
-
   font-family: 'Jost', sans-serif;
-
-  font-size: 1.05rem;
-
+  font-size: 1.1rem;
   font-weight: 700;
-
-  letter-spacing: 0.5px;
-
+  line-height: 1.2;
+  position: relative;
   transition: opacity 0.2s ease;
 }
 
-
-/* Navigation Hover Effect */
-
 .nav-link:hover {
-  opacity: 0.75;
+  opacity: 0.85;
 }
-
 
 /* =========================
    Hero Section
 ========================= */
-
 .hero {
   flex: 1;
-
   display: flex;
-
   align-items: center;
-
-  padding-left: 2rem;
+  padding: 0 4rem 4rem 4rem; /* Aligns with the 4rem navbar left margin */
 }
-
-
-/* Hero Content */
 
 .hero-content {
   display: flex;
-
   flex-direction: column;
-
   align-items: flex-start;
-
   gap: 1.75rem;
 }
-
 
 /* =========================
    Kizami Brand Title
 ========================= */
-
 .brand-title {
   font-family: 'Libre Bodoni', serif;
-
   font-weight: 700;
-
   font-size: clamp(4.5rem, 10vw, 7.5rem);
-
   line-height: 1;
-
   letter-spacing: 0.02em;
-
   color: #E9E8D9;
-
   user-select: none;
 }
-
 
 /* =========================
    Buttons Container
 ========================= */
-
 .cta-group {
   display: flex;
-
   align-items: center;
-
   gap: 1rem;
 }
-
 
 /* =========================
    General Button Styling
 ========================= */
-
 .btn {
   display: inline-block;
-
   padding: 0.65rem 2rem;
-
   font-family: 'Jost', sans-serif;
-
   font-weight: 500;
-
   font-size: 1rem;
-
   text-decoration: none;
-
   border-radius: 9999px;
-
   cursor: pointer;
-
   transition: all 0.2s ease-in-out;
-
   text-align: center;
 }
 
-
-/* =========================
-   Sign Up Button
-========================= */
-
+/* Sign Up Button */
 .btn-primary {
   background-color: #E9E8D9;
-
   color: #452D45;
-
   border: 1.5px solid #E9E8D9;
 }
 
-
-/* Sign Up Hover */
-
 .btn-primary:hover {
   background-color: #ffffff;
-
   border-color: #ffffff;
-
   transform: translateY(-1px);
 }
 
-
-/* =========================
-   Sign In Button
-========================= */
-
+/* Sign In Button */
 .btn-secondary {
   background-color: transparent;
-
   color: #E9E8D9;
-
   border: 2.93px solid #E9E8D9;
 }
 
-
-/* Sign In Hover */
-
 .btn-secondary:hover {
   background-color: rgba(233, 232, 217, 0.12);
-
   transform: translateY(-1px);
 }
-
 
 /* =========================
    Responsive Design
 ========================= */
-
 @media (max-width: 640px) {
-
-  /* Smaller page padding */
-  .page-wrapper {
-    padding: 1.5rem;
+  .navbar {
+    padding: 1.25rem 2rem;
   }
 
-
-  /* Smaller navigation gap */
   .nav-links {
     gap: 1.5rem;
   }
 
-
-  /* Remove left padding from hero */
   .hero {
-    padding-left: 0;
+    padding: 0 2rem 2rem 2rem;
   }
 
-
-  /* Stack buttons vertically */
   .cta-group {
     flex-direction: column;
-
     width: 100%;
   }
 
-
-  /* Make buttons full width */
   .btn {
     width: 100%;
   }
-
 }

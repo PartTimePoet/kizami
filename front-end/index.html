@@ -3,93 +3,44 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>kizami</title>
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&family=Libre+Bodoni:wght@700&display=swap"
-    rel="stylesheet"
-  >
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&family=Libre+Bodoni:wght@700&display=swap" rel="stylesheet">
 
   <!-- Main CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-
   <div class="page-wrapper">
 
-    <!-- =========================
-         Navigation Bar
-    ========================== -->
-    <header class="navbar">
+<header class="navbar">
+  <!-- Invisible placeholder to match explore navbar height & layout perfectly -->
+  <span class="logo logo-placeholder" aria-hidden="true">kizami</span>
 
-      <nav class="nav-links">
+  <nav class="nav-links">
+    <a href="explore.html" class="nav-link">explore</a>
+    <a href="manual.html" class="nav-link">manual</a>
+    <a href="history.html" class="nav-link">history</a>
+  </nav>
+</header>
 
-        <a href="explore.html" class="nav-link">
-          explore
-        </a>
-
-        <a href="manual.html" class="nav-link">
-          manual
-        </a>
-
-        <a href="history.html" class="nav-link">
-          history
-        </a>
-
-      </nav>
-
-    </header>
-
-
-    <!-- =========================
-         Hero Section
-    ========================== -->
+    <!-- Hero Section -->
     <main class="hero">
-
       <div class="hero-content">
-
-        <!-- Website Name -->
-        <h1 class="brand-title">
-          kizami
-        </h1>
-
-
-        <!-- Sign Up / Sign In Buttons -->
+        <h1 class="brand-title">kizami</h1>
         <div class="cta-group">
-
-          <a
-            href="signup.html"
-            class="btn btn-primary"
-            id="btn-signup"
-          >
-            Sign Up
-          </a>
-
-          <a
-            href="signin.html"
-            class="btn btn-secondary"
-            id="btn-signin"
-          >
-            Sign In
-          </a>
-
+          <a href="signup.html" class="btn btn-primary" id="btn-signup">Sign Up</a>
+          <a href="signin.html" class="btn btn-secondary" id="btn-signin">Sign In</a>
         </div>
-
       </div>
-
     </main>
 
   </div>
 
-
-  <!-- JavaScript -->
   <script src="script.js"></script>
-
 </body>
 </html>
