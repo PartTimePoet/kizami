@@ -1,0 +1,129 @@
+/* =========================
+   Global Reset & Base Setup
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #ECE7DC; /* Cream page background */
+  font-family: 'Jost', sans-serif;
+  color: #452D45;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ========================================================
+   Navigation Bar (Identical to Explore & Sign Up)
+   ======================================================== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 4rem;
+  background-color: #452D45;
+  background-image: url('assets/wallpaper.png');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+}
+
+.logo {
+  font-family: 'Libre Bodoni', serif;
+  font-weight: 700;
+  font-size: 2.2rem;
+  line-height: 1.2;
+  color: #E9E8D9;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+}
+
+.nav-links {
+  display: flex;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+.nav-link {
+  color: #E9E8D9;
+  text-decoration: none;
+  font-family: 'Jost', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.2;
+  position: relative;
+  transition: opacity 0.2s ease;
+}
+
+.nav-link:hover {
+  opacity: 0.85;
+}
+
+/* ========================================================
+   Centered Confirmation Content
+   ======================================================== */
+.content-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.confirmation-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+}
+
+.confirmation-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #452D45;
+  letter-spacing: 0.01em;
+}
+
+/* ========================================================
+   Sign In Button
+   ======================================================== */
+.btn-signin {
+  display: inline-block;
+  background-color: #452D45;
+  color: #E9E8D9;
+  font-family: 'Jost', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0.65rem 3.2rem;
+  border-radius: 9999px; /* Pill shape */
+  box-shadow: 0 4px 12px rgba(69, 45, 69, 0.2);
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-signin:hover {
+  background-color: #352135;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(69, 45, 69, 0.25);
+}
+
+/* ========================================================
+   Responsive Design
+   ======================================================== */
+@media (max-width: 640px) {
+  .navbar {
+    padding: 1.25rem 2rem;
+  }
+
+  .nav-links {
+    gap: 1.5rem;
+  }
+
+  .confirmation-title {
+    font-size: 1.5rem;
+  }
+}
