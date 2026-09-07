@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>kizami — sign in</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Libre+Bodoni:wght@700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="signin.css" />
+</head>
+<body>
+
+  <!-- Top Navigation Bar (Exact Match with Explore Page) -->
+  <header class="navbar">
+    <a href="index.html" class="logo">kizami</a>
+    <nav class="nav-links">
+      <a href="explore.html" class="nav-link">explore</a>
+      <a href="manual.html" class="nav-link">manual</a>
+      <a href="history.html" class="nav-link">history</a>
+    </nav>
+  </header>
+
+  <!-- Main Sign In Section -->
+  <main class="signin-wrapper">
+    <div class="signin-card">
+      
+      <!-- Logo Header inside the Card -->
+      <div class="card-brand">
+        <img src="../assets/logo.png" alt="Hourglass Logo" class="brand-icon" />
+        <span class="brand-name">kizami</span>
+      </div>
+
+      <form class="signin-form" id="signin-form">
+        
+        <div class="input-group">
+          <label for="username">username</label>
+          <input type="text" id="username" name="username" required autocomplete="username" />
+        </div>
+
+        <div class="input-group">
+          <label for="password">password</label>
+          <input type="password" id="password" name="password" required autocomplete="current-password" />
+        </div>
+
+        <div class="form-links">
+          <a href="forgot-password.html" class="sub-link">Forgot password?</a>
+          <a href="signup.html" class="sub-link">Don't have an account?</a>
+        </div>
+
+        <div class="submit-container">
+          <button type="submit" class="btn-signin">Sign In!</button>
+        </div>
+
+      </form>
+    </div>
+  </main>
+
+  <script src="signin.js"></script>
+</body>
+</html>

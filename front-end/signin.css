@@ -9,7 +9,7 @@
 
 body {
   min-height: 100vh;
-  background-color: #ECE7DC; /* Cream page background */
+  background-color: #ECE7DC; /* Soft cream background */
   font-family: 'Jost', sans-serif;
   color: #452D45;
   display: flex;
@@ -17,7 +17,7 @@ body {
 }
 
 /* ========================================================
-   Navigation Bar (Identical to Explore & Sign Up)
+   Navigation Bar (Exact Match with Explore Page)
    ======================================================== */
 .navbar {
   display: flex;
@@ -33,6 +33,7 @@ body {
   width: 100%;
   box-shadow: 0 4px 15px rgba(69, 45, 69, 0.25);
 }
+
 
 .logo {
   font-family: 'Libre Bodoni', serif;
@@ -66,52 +67,135 @@ body {
 }
 
 /* ========================================================
-   Centered Confirmation Content
+   Sign In Layout & Card
    ======================================================== */
-.content-wrapper {
+.signin-wrapper {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
+  padding: 2.5rem 2rem;
 }
 
-.confirmation-container {
+.signin-card {
+  max-width: 580px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
-  gap: 1.5rem;
 }
 
-.confirmation-title {
+/* Card Brand Header (Hourglass + kizami) */
+.card-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  margin-bottom: 2rem;
+}
+
+.brand-icon {
+  width: 80px;
+  height: auto;
+  object-fit: contain;
+}
+
+.brand-name {
+  font-family: 'Libre Bodoni', serif;
+  font-weight: 700;
   font-size: 2rem;
+  color: #452D45;
+  letter-spacing: 0.02em;
+}
+
+/* Form Styles */
+.signin-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.input-group label {
+  font-size: 1.05rem;
   font-weight: 700;
   color: #452D45;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.2px;
+}
+
+.input-group input {
+  width: 100%;
+  height: 44px;
+  background-color: #C4A77D; /* Tan/brown field fill matching theme */
+  border: none;
+  border-radius: 12px;
+  padding: 0 1rem;
+  font-family: 'Jost', sans-serif;
+  font-size: 1rem;
+  color: #452D45;
+  outline: none;
+  transition: box-shadow 0.2s ease;
+}
+
+.input-group input:focus {
+  box-shadow: 0 0 0 2.5px #452D45;
+}
+
+/* Helper Links Row */
+.form-links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.25rem;
+  padding: 0 0.25rem;
+}
+
+.sub-link {
+  color: #2F6F7E;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: opacity 0.2s ease;
+}
+
+.sub-link:hover {
+  opacity: 0.8;
 }
 
 /* ========================================================
-   Sign In Button
+   Sign In Button (Custom Styled)
    ======================================================== */
+.submit-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
 .btn-signin {
-  display: inline-block;
+  width: 100%;
   background-color: #452D45;
   color: #E9E8D9;
   font-family: 'Jost', sans-serif;
   font-size: 1.05rem;
-  font-weight: 600;
-  text-decoration: none;
-  padding: 0.65rem 3.2rem;
-  border-radius: 9999px; /* Pill shape */
+  font-weight: 500; /* Medium weight */
+  padding: 0.75rem 2rem;
+  border: 2.93px solid #E9E8D9; /* 2.93px stroke */
+  border-radius: 9999px;
+  cursor: pointer;
   box-shadow: 0 4px 12px rgba(69, 45, 69, 0.2);
-  transition: all 0.2s ease-in-out;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  text-align: center;
 }
 
 .btn-signin:hover {
   background-color: #352135;
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(69, 45, 69, 0.25);
 }
 
 /* ========================================================
@@ -124,9 +208,5 @@ body {
 
   .nav-links {
     gap: 1.5rem;
-  }
-
-  .confirmation-title {
-    font-size: 1.5rem;
   }
 }

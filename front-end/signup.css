@@ -21,14 +21,17 @@ body {
    ======================================================== */
 .navbar {
   display: flex;
+  position: sticky;
+  top: 0;
   justify-content: space-between;
   align-items: center;
   padding: 1.25rem 4rem;
   background-color: #452D45;
-  background-image: url('assets/wallpaper.png');
+  /* background-image: url('../assets/wallpaper.png'); */
   background-size: cover;
   background-position: center;
   width: 100%;
+  box-shadow: 0 4px 15px rgba(69, 45, 69, 0.25);
 }
 
 .logo {

@@ -1,25 +1,36 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Trigger pie chart animation on load
+
+  // ── Smooth scroll to hash section on page load ──
+  const hash = window.location.hash;
+  if (hash) {
+    const target = document.querySelector(hash);
+    if (target) {
+      setTimeout(() => {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 200);
+    }
+  }
+
+  // ── Pie chart animation ──
   const charts = document.querySelectorAll('.pie-chart');
 
-  // Small timeout to allow the browser to paint before starting transition
   setTimeout(() => {
     charts.forEach((chart) => {
       chart.classList.add('animated');
     });
   }, 150);
 
-  // Optional: re-trigger chart spin/fill effect on card hover
+  // Re-trigger chart on card hover
   const cards = document.querySelectorAll('.card');
   cards.forEach((card) => {
-
     card.addEventListener('mouseenter', () => {
       const chart = card.querySelector('.pie-chart');
       if (chart) {
         chart.classList.remove('animated');
-        void chart.offsetWidth; // Force reflow
+        void chart.offsetWidth;
         chart.classList.add('animated');
       }
     });
   });
+
 });

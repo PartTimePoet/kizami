@@ -37,10 +37,17 @@ body {
    ======================================================== */
 .navbar {
   display: flex;
+  position: sticky;
+  top: 0;
   justify-content: space-between;
   align-items: center;
   padding: 1.25rem 4rem;
+  background-color: #452D45;
+  /* background-image: url('../assets/wallpaper.png'); */
+  background-size: cover;
+  background-position: center;
   width: 100%;
+  box-shadow: 0 4px 15px rgba(69, 45, 69, 0.25);
 }
 
 .logo {
@@ -95,6 +102,36 @@ body {
   flex-direction: column;
   align-items: flex-start;
   gap: 1.75rem;
+}
+
+.scroll-arrow {
+  position: fixed;
+  bottom: 2.5rem;
+  right: 2.5rem;
+  width: 56px;
+  height: 56px;
+  background: #E9E8D9;              /* circle fill */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 1.5rem; 
+  color: #452D45;                    /* arrow color */
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  animation: float 2s ease-in-out infinite;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.scroll-arrow:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(6px); }
 }
 
 /* =========================

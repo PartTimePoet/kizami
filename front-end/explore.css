@@ -17,14 +17,17 @@ body {
 /* ==================== Navigation Bar ==================== */
 .navbar {
   display: flex;
+  position: sticky;
+  top: 0;
   justify-content: space-between;
   align-items: center;
   padding: 1.25rem 4rem;
   background-color: #452D45;
-  background-image: url('assets/wallpaper.png');
+  /* background-image: url('../assets/wallpaper.png'); */
   background-size: cover;
   background-position: center;
   width: 100%;
+  box-shadow: 0 4px 15px rgba(69, 45, 69, 0.25);
 }
 
 .logo {
@@ -132,6 +135,37 @@ body {
   text-align: center;
   padding: 0 0.5rem;
 }
+
+
+/* Scroll-down arrow */
+.scroll-arrow {
+  display: inline-block;
+  font-size: 2rem;
+  color: #E9E8D9;
+  text-decoration: none;
+  animation: float 2s ease-in-out infinite;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.scroll-arrow:hover {
+  opacity: 0.6;
+}
+
+.scroll-down {
+  text-align: center;
+  padding: 2rem 0 3rem;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(8px); }
+}
+
+#explore-section {
+  scroll-margin-top: 100px;  /* enough to clear the fixed navbar */
+}
+
 
 /* ==================== Animated Pie Charts ==================== */
 .chart-container {

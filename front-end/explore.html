@@ -24,78 +24,88 @@
     </nav>
   </header>
 
-  <!-- Main Card Grid -->
-  <main class="explore-container">
-    <div class="cards-grid">
+  <!-- 👇 Wrapped the main content in a section with ID -->
+  <section id="explore-section">
 
-      <!-- Card 1: Pomodoro Timer -->
-      <section class="card">
-        <div class="card-header">
-          <h2 class="card-title">Pomodoro Timer</h2>
-          <ul class="timer-specs">
-            <li>focus time - 25 min</li>
-            <li>short break - 5 min</li>
-            <li>long break - 10 min</li>
-          </ul>
-        </div>
+    <!-- Main Card Grid -->
+    <main class="explore-container">
+      <div class="cards-grid">
 
-        <!-- Animated SVG Pie Chart (3 Segments: 25m Focus, 10m Long Break, 5m Short Break) -->
-        <div class="chart-container" data-chart="pomodoro">
-          <svg viewBox="0 0 100 100" class="pie-chart">
-            <!-- Background slice / Focus (Purple) 62.5% -->
-            <circle class="pie-slice slice-purple" r="25" cx="50" cy="50"
-                    style="--target-dash: 98.17; --total: 157.08; --offset: 0;"></circle>
-            <!-- Long Break (Ochre / Gold) 25% -->
-            <circle class="pie-slice slice-gold" r="25" cx="50" cy="50"
-                    style="--target-dash: 39.27; --total: 157.08; --offset: -98.17;"></circle>
-            <!-- Short Break (Sage Green) 12.5% -->
-            <circle class="pie-slice slice-green" r="25" cx="50" cy="50"
-                    style="--target-dash: 19.63; --total: 157.08; --offset: -137.44;"></circle>
-          </svg>
-        </div>
+        <!-- Card 1: Pomodoro Timer -->
+        <section class="card">
+          <div class="card-header">
+            <h2 class="card-title">Pomodoro Timer</h2>
+            <ul class="timer-specs">
+              <li>focus time - 25 min</li>
+              <li>short break - 5 min</li>
+              <li>long break - 10 min</li>
+            </ul>
+          </div>
 
-        <a href="pomodoro.html" class="btn-try">Try Now!</a>
-      </section>
+          <!-- Animated SVG Pie Chart (3 Segments: 25m Focus, 10m Long Break, 5m Short Break) -->
+          <div class="chart-container" data-chart="pomodoro">
+            <svg viewBox="0 0 100 100" class="pie-chart">
+              <!-- Background slice / Focus (Purple) 62.5% -->
+              <circle class="pie-slice slice-purple" r="25" cx="50" cy="50"
+                      style="--target-dash: 98.17; --total: 157.08; --offset: 0;"></circle>
+              <!-- Long Break (Ochre / Gold) 25% -->
+              <circle class="pie-slice slice-gold" r="25" cx="50" cy="50"
+                      style="--target-dash: 39.27; --total: 157.08; --offset: -98.17;"></circle>
+              <!-- Short Break (Sage Green) 12.5% -->
+              <circle class="pie-slice slice-green" r="25" cx="50" cy="50"
+                      style="--target-dash: 19.63; --total: 157.08; --offset: -137.44;"></circle>
+            </svg>
+          </div>
 
-      <!-- Card 2: 52/17 Ultradian Rhythm -->
-      <section class="card">
-        <div class="card-header">
-          <h2 class="card-title">52/17 Ultradian<br>Rhythm</h2>
-          <ul class="timer-specs">
-            <li>focus time - 52min</li>
-            <li>break - 17 min</li>
-          </ul>
-        </div>
+          <a href="pomodoro.html" class="btn-try">Try Now!</a>
+        </section>
 
-        <!-- Animated SVG Pie Chart (2 Segments: 52m Focus 75.4%, 17m Break 24.6%) -->
-        <div class="chart-container" data-chart="ultradian">
-          <svg viewBox="0 0 100 100" class="pie-chart">
-            <!-- Focus (Purple) ~75.4% -->
-            <circle class="pie-slice slice-purple" r="25" cx="50" cy="50"
-                    style="--target-dash: 118.44; --total: 157.08; --offset: 0;"></circle>
-            <!-- Break (Ochre / Gold) ~24.6% -->
-            <circle class="pie-slice slice-gold" r="25" cx="50" cy="50"
-                    style="--target-dash: 38.64; --total: 157.08; --offset: -118.44;"></circle>
-          </svg>
-        </div>
+        <!-- Card 2: 52/17 Ultradian Rhythm -->
+        <section class="card">
+          <div class="card-header">
+            <h2 class="card-title">52/17 Ultradian<br>Rhythm</h2>
+            <ul class="timer-specs">
+              <li>focus time - 52min</li>
+              <li>break - 17 min</li>
+            </ul>
+          </div>
 
-        <a href="ultradian.html" class="btn-try">Try Now!</a>
-      </section>
+          <!-- Animated SVG Pie Chart (2 Segments: 52m Focus 75.4%, 17m Break 24.6%) -->
+          <div class="chart-container" data-chart="ultradian">
+            <svg viewBox="0 0 100 100" class="pie-chart">
+              <!-- Focus (Purple) ~75.4% -->
+              <circle class="pie-slice slice-purple" r="25" cx="50" cy="50"
+                      style="--target-dash: 118.44; --total: 157.08; --offset: 0;"></circle>
+              <!-- Break (Ochre / Gold) ~24.6% -->
+              <circle class="pie-slice slice-gold" r="25" cx="50" cy="50"
+                      style="--target-dash: 38.64; --total: 157.08; --offset: -118.44;"></circle>
+            </svg>
+          </div>
 
-      <!-- Card 3: Eisenhower Timer -->
-      <section class="card">
-        <div class="card-header">
-          <h2 class="card-title">Eisenhower Timer</h2>
-          <p class="card-description">
-            adapts your work interval based on task priority. Urgent and important tasks get short, intense 25-minute sprints. Important but not urgent work unlocks 50-minute deep-focus blocks. Busywork gets quick 15-minute bursts. One tap on a task, and the timer sets itself — no deciding, just doing.
-          </p>
-        </div>
+          <a href="ultradian.html" class="btn-try">Try Now!</a>
+        </section>
 
-        <a href="eisenhower.html" class="btn-try">Try Now!</a>
-      </section>
+        <!-- Card 3: Eisenhower Timer -->
+        <section class="card">
+          <div class="card-header">
+            <h2 class="card-title">Eisenhower Timer</h2>
+            <p class="card-description">
+              adapts your work interval based on task priority. Urgent and important tasks get short, intense 25-minute sprints. Important but not urgent work unlocks 50-minute deep-focus blocks. Busywork gets quick 15-minute bursts. One tap on a task, and the timer sets itself — no deciding, just doing.
+            </p>
+          </div>
 
+          <a href="eisenhower.html" class="btn-try">Try Now!</a>
+        </section>
+
+      </div>
+    </main>
+
+    <!-- ↓ Scroll-down arrow linking to manual page -->
+    <div class="scroll-down">
+      <a href="manual.html#manual-section" class="scroll-arrow">↓</a>
     </div>
-  </main>
+
+  </section>
 
   <script src="explore.js"></script>
 </body>
